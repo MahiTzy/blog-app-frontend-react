@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { getToken } from '../auth';
 
-export const Base_URL = 'https://blogappapi-09cf97720945.herokuapp.com/api/v1';
+export const Base_URL = 'https://java-blogapp.onrender.com/api/v1';
 
 export const myAxios = axios.create({
     baseURL: Base_URL
