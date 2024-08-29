@@ -24,10 +24,10 @@ const UpdatePost = () => {
 
     useEffect(() => {
         loadAllCategories().then(response => {
-            console.log(response);
+            // console.log(response);
             setCategories(response);
             getPost(postId).then(response => {
-                console.log(response)
+                // console.log(response)
                 setPost(response)
             }
             ).catch(error => {
@@ -40,11 +40,11 @@ const UpdatePost = () => {
     }, [postId])
 
     useEffect(() => {
-        console.log(post)
+        // console.log(post)
     }, [post])
 
     const handleChange = (event) => {
-        console.log(event.target.value)
+        // console.log(event.target.value)
         setPost({
             ...post,
             [event.target.id]: event.target.value
@@ -52,7 +52,7 @@ const UpdatePost = () => {
     }
 
     const handleCategoryChange = (event) => {
-        console.log(event.target.value)
+        // console.log(event.target.value)
         setPost({
             ...post,
             category: {
@@ -63,13 +63,13 @@ const UpdatePost = () => {
 
     const handleFileChange = (event) => {
         setImage(event.target.files[0])
-        console.log(event.target.files[0])
+        // console.log(event.target.files[0])
     }
 
 
     const handleContentChange = () => {
         return (content) => {
-            console.log(content)
+            // console.log(content)
             setPost({
                 ...post,
                 content: content
@@ -79,14 +79,14 @@ const UpdatePost = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log("Post: ", post);
+        // console.log("Post: ", post);
         updatePost(post).then(response => {
             if (image === null) {
                 navigate('/user/dashboard', { state: { message: 'Post updated successfully', type: 'success' } });
                 return;
             }
             uploadImage(image, response.postId).then(response => {
-                console.log(response);
+                // console.log(response);
             }).catch(error => {
                 console.log(error);
             });
@@ -124,7 +124,7 @@ const UpdatePost = () => {
                     <CardBody>
                         <Form onSubmit={handleSubmit}>
                             <FormGroup>
-                                <Label for="title">Post Title</Label>
+                                <Label htmlFor="title">Post Title</Label>
                                 <Input
                                     value={post.title}
                                     onChange={(e)=>handleChange(e)}
@@ -136,7 +136,7 @@ const UpdatePost = () => {
                             </FormGroup>
 
                             <FormGroup>
-                                <Label for="content">Post Content</Label>
+                                <Label htmlFor="content">Post Content</Label>
                                 <JoditEditor
                                     ref={editor}
                                     value={post.content}
@@ -147,7 +147,7 @@ const UpdatePost = () => {
                             <Row>
                                 <Col md="6">
                                     <FormGroup>
-                                        <Label for="image">Post Image</Label>
+                                        <Label htmlFor="image">Post Image</Label>
                                         <Input
                                             type="file"
                                             id="image"
@@ -159,7 +159,7 @@ const UpdatePost = () => {
 
                                 <Col md="6">
                                     <FormGroup>
-                                        <Label for="category">Post Category</Label>
+                                        <Label htmlFor="category">Post Category</Label>
                                         <Input
                                             value={post.categoryId}
                                             onChange={(e)=>handleCategoryChange(e)}

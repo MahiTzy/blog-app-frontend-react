@@ -26,7 +26,7 @@ const ContactUs = () => {
                         <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
                         <form id="contactForm" name="sentMessage">
                             <div class="control-group">
-                                <div class="form-floating controls mb-3"><input class="form-control" type="text" id="name" required="" placeholder="Name" /><label class="form-label" for="name">Name</label><small class="form-text text-danger help-block"></small></div>
+                                <div class="form-floating controls mb-3"><input class="form-control" type="text" id="name" required="" placeholder="Name" /><label class="form-label" htmlFor="name">Name</label><small class="form-text text-danger help-block"></small></div>
                             </div>
                             <div class="control-group">
                                 <div class="form-floating controls mb-3"><input class="form-control" type="email" id="email" required="" placeholder="Email Address" /><label class="form-label">Email Address</label><small class="form-text text-danger help-block"></small></div>

@@ -63,22 +63,22 @@ const Register = ({ isOpen, toggleModal }) => {
                     <ModalBody>
                         <Container>
                             <FormGroup>
-                                <Label for='name'>Name</Label>
+                                <Label htmlFor='name'>Name</Label>
                                 <Input invalid={error.errors?.response?.data?.name ? true : false} value={data.name} onChange={handleChange} type='text' placeholder='Name' id='name' />
                                 <FormFeedback>{error.errors?.response?.data?.name}</FormFeedback>
                             </FormGroup>
                             <FormGroup>
-                                <Label for='email'>Email</Label>
+                                <Label htmlFor='email'>Email</Label>
                                 <Input invalid={error.errors?.response?.data?.email ? true : false} value={data.email} onChange={handleChange} type='email' placeholder='Email' id='email' />
                                 <FormFeedback>{error.errors?.response?.data?.email}</FormFeedback>
                             </FormGroup>
                             <FormGroup>
-                                <Label for='password'>Password</Label>
+                                <Label htmlFor='password'>Password</Label>
                                 <Input invalid={error.errors?.response?.data?.password ? true : false} value={data.password} onChange={handleChange} type='password' placeholder='Password' id='password' />
                                 <FormFeedback>{error.errors?.response?.data?.password}</FormFeedback>
                             </FormGroup>
                             <FormGroup>
-                                <Label for='about'>About</Label>
+                                <Label htmlFor='about'>About</Label>
                                 <Input invalid={error.errors?.response?.data?.about ? true : false} value={data.about} onChange={handleChange} type='textarea' placeholder='About' id='about' />
                                 <FormFeedback>{error.errors?.response?.data?.about}</FormFeedback>
                             </FormGroup>

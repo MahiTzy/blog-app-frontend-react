@@ -4,7 +4,7 @@ const FootTool = () => {
   return (
     <div>
       <footer>
-        <div classNameName="container">
+        <div className="container">
             <div className="row">
                 <div className="col-md-10 col-lg-8 mx-auto">
                     <ul className="list-inline text-center">

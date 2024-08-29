@@ -92,7 +92,7 @@ const AddPost = () => {
                     <CardBody>
                         <Form onSubmit={e => handleSubmit(e)}>
                             <FormGroup>
-                                <Label for="title">Post Title</Label>
+                                <Label htmlFor="title">Post Title</Label>
                                 <Input
                                     value={post.title}
                                     onChange={handleChange()}
@@ -104,7 +104,7 @@ const AddPost = () => {
                             </FormGroup>
 
                             <FormGroup>
-                                <Label for="content">Post Content</Label>
+                                <Label htmlFor="content">Post Content</Label>
                                 <JoditEditor
                                     ref={editor}
                                     value={post.content}
@@ -115,7 +115,7 @@ const AddPost = () => {
                             <Row>
                                 <Col md="6">
                                     <FormGroup>
-                                        <Label for="image">Post Image</Label>
+                                        <Label htmlFor="image">Post Image</Label>
                                         <Input
                                             type="file"
                                             ref={imageRef}  // Attach the ref to the file input
@@ -128,7 +128,7 @@ const AddPost = () => {
 
                                 <Col md="6">
                                     <FormGroup>
-                                        <Label for="category">Post Category</Label>
+                                        <Label htmlFor="category">Post Category</Label>
                                         <Input
                                             value={post.categoryId || 0}
                                             onChange={handleChange()}

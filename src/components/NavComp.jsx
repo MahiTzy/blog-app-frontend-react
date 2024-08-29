@@ -62,7 +62,7 @@ const NavComp = ({ toggleLoginModal, toggleRegisterModal }) => {
       setTimeout(() => {
       navigate('/',{state:{message:'User logged out successfully!', type:'success'}});
       }, 0);
-      console.log('Logged out');
+      // console.log('Logged out');
     });
   }
 

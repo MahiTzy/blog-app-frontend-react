@@ -44,7 +44,7 @@ const UserPosts = () => {
               <div className="card mb-2">
                 <div className="card-body">
                   <div className="post-preview">
-                    <Link to={'/user/post/' + post.postId}>
+                    <Link to={"/blog-page/"+post.postId}>
                       <h2 className="post-title">{post.title}</h2>
                       {post.content.length > 100 ? (
                         <h3

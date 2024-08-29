@@ -44,7 +44,7 @@ const Login = ({ isOpen, toggleModal }) => {
     }
 
     const handleChange = (e) => {
-        console.log(e.target.id, e.target.value)
+        // console.log(e.target.id, e.target.value)
         setData({ ...data, [e.target.id]: e.target.value })
     }
 
@@ -56,11 +56,11 @@ const Login = ({ isOpen, toggleModal }) => {
                     <ModalBody>
                         <Container>
                             <FormGroup>
-                                <Label for='username'>Email</Label>
+                                <Label htmlFor='username'>Email</Label>
                                 <Input onChange={handleChange} type='email' placeholder='Email' id='username' />
                             </FormGroup>
                             <FormGroup>
-                                <Label for='password'>Password</Label>
+                                <Label htmlFor='password'>Password</Label>
                                 <Input onChange={handleChange} type='password' placeholder='Password' id='password' />
                             </FormGroup>
                         </Container>
